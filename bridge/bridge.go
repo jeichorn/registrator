@@ -198,7 +198,7 @@ func (b *Bridge) add(containerId string, quiet bool) {
 		return
 	}
 
-	if b.config.FilterRegexp) != "" {
+	if b.config.FilterRegexp != "" {
 		match, _ := regexp.MatchString(b.config.FilterRegexp, container.Name)
 			if !match {
 				log.Println("not match name:", container.Name, "[", b.config.FilterRegexp, "]")
